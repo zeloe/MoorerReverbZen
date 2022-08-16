@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="oG7CRe" name="MoorerReverbZen" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              bundleIdentifier="CodeZenAudio" pluginFormats="buildVST3" pluginManufacturer="CodeZenAudio"
+              pluginVST3Category="Reverb">
+  <MAINGROUP id="s9s7l2" name="MoorerReverbZen">
+    <GROUP id="{6AFDA77A-DE7E-35E8-8BFE-7C4C112D438D}" name="Source">
+      <GROUP id="{ABD23A2E-F6E9-58C3-5553-3CE491E0BBB6}" name="AudioProcessor">
+        <FILE id="ZgL56I" name="AudioEngine.h" compile="0" resource="0" file="Source/AudioEngine.h"/>
+      </GROUP>
+      <GROUP id="{AD98D4BF-94B3-403B-5921-25147D0C4093}" name="Reverb">
+        <FILE id="qN6WC4" name="APF.h" compile="0" resource="0" file="Source/APF.h"/>
+        <FILE id="L3Ylwh" name="LPCF.h" compile="0" resource="0" file="Source/LPCF.h"/>
+        <FILE id="pCui3H" name="PreDelays.h" compile="0" resource="0" file="Source/PreDelays.h"/>
+      </GROUP>
+      <GROUP id="{D04628AE-D656-333A-0BD6-AC0C74E103FD}" name="Delay">
+        <FILE id="MVdfEF" name="AllPassFilter.h" compile="0" resource="0" file="Source/AllPassFilter.h"/>
+        <FILE id="YOR3eJ" name="Delay.h" compile="0" resource="0" file="Source/Delay.h"/>
+        <FILE id="RCNri3" name="DelayLine.h" compile="0" resource="0" file="Source/DelayLine.h"/>
+        <FILE id="nOCzcH" name="FFeedbackCombDelay.h" compile="0" resource="0"
+              file="Source/FFeedbackCombDelay.h"/>
+      </GROUP>
+      <FILE id="tykhfo" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="fgFHd5" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="o9t834" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="SeFXzC" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="MoorerReverbZen"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="MoorerReverbZen"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Applications/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../Applications/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>

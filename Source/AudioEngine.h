@@ -12,6 +12,7 @@
 #include "PreDelays.h"
 #include "LPCF.h"
 #include "APF.h"
+#include "MCF.h"
 class AudioEngine
 {
 public:
@@ -40,6 +41,7 @@ public:
         juce::dsp::ProcessContextReplacing<float> contextR (blockR);
         fxChainR.process(contextR);
     }
+    
     void updateAmount (float newValue)
     {
         fxChainL.template get<preDelayIndex>().getAmount(newValue);
@@ -73,6 +75,7 @@ public:
         fxChainL.template get<APFIndex>().getTime(newValue);
         fxChainR.template get<APFIndex>().getTime(newValue);
     }
+   
     
 private:
     enum
@@ -82,8 +85,8 @@ private:
         APFIndex
     };
     
-    juce::dsp::ProcessorChain<PreDelays<float> ,LPCF<float>,APF<float>> fxChainL;
-    juce::dsp::ProcessorChain<PreDelays<float> ,LPCF<float>,APF<float>> fxChainR; //APF<float>,
+    juce::dsp::ProcessorChain<PreDelays<float> ,LPCF<float>,  APF<float>> fxChainL;
+    juce::dsp::ProcessorChain<PreDelays<float> ,LPCF<float>, APF<float>> fxChainR;  
    
     
     

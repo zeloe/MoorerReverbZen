@@ -40,7 +40,6 @@ MoorerReverbZenAudioProcessor::~MoorerReverbZenAudioProcessor()
     treeState.removeParameterListener("resonancestime", this);
     treeState.removeParameterListener("lateReflextions", this);
     treeState.removeParameterListener("lateReflextionstime", this);
-   
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout
@@ -59,6 +58,7 @@ MoorerReverbZenAudioProcessor::createParameterLayout()
                                                           "Latereflextions",0.00f,1.f,0.75f));
     auto pLateReflextionsTime = (std::make_unique<juce::AudioParameterFloat>("lateReflextionstime",
                                                           "LatereflextionsTime",0.01f,1.f,0.75f));
+    
    
     
     params.push_back(std::move(pEr));

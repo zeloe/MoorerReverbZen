@@ -108,7 +108,7 @@ private:
         size_t counter1 = 0;
         for(auto& dl : delayLines)
         {
-            dl.setWetLevel(fbcfdelaytime[counter1] * delaySmooth.getNextValue());
+            dl.setDelayTime(0,fbcfdelaytime[counter1] * delaySmooth.getNextValue());
             counter1++;
         }
         

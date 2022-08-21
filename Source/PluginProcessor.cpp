@@ -95,6 +95,16 @@ void MoorerReverbZenAudioProcessor::parameterChanged(const juce::String &paramte
   
 }
 
+void MoorerReverbZenAudioProcessor::updateParameters()
+{
+    audioEngine.updateAmount(treeState.getRawParameterValue("er")->load());
+    audioEngine.updatepreReverbTime(treeState.getRawParameterValue("ertime")->load());
+    audioEngine.updateReso(treeState.getRawParameterValue("resonances")->load());
+    audioEngine.updateresoReverbTime(treeState.getRawParameterValue("resonancestime")->load());
+    audioEngine.updateLateReflextions(treeState.getRawParameterValue("lateReflextions")->load());
+    audioEngine.updatelateReverbTime(treeState.getRawParameterValue("lateReflextionstime")->load());
+    
+}
 
 //==============================================================================
 const juce::String MoorerReverbZenAudioProcessor::getName() const
@@ -167,6 +177,7 @@ void MoorerReverbZenAudioProcessor::prepareToPlay (double sampleRate, int sample
     spec.sampleRate = sampleRate;
     spec.numChannels = 1;
     audioEngine.prepare(spec);
+    updateParameters();
     
 }
 

@@ -73,19 +73,27 @@ MoorerReverbZenAudioProcessor::createParameterLayout()
 
 void MoorerReverbZenAudioProcessor::parameterChanged(const juce::String &paramterID, float newValue)
 {
-   updateParameters();
+    if (paramterID == "er")
+    {
+        audioEngine.updateAmount(newValue);
+    } else if (paramterID == "ertime")
+    {
+        audioEngine.updatepreReverbTime(newValue);
+    } else if (paramterID == "resonances")
+    {
+        audioEngine.updateReso(newValue);
+    } else if (paramterID == "resonancestime")
+    {
+        audioEngine.updateresoReverbTime(newValue);
+    } else if (paramterID == "lateReflextions")
+    {
+        audioEngine.updateLateReflextions(newValue);
+    } else if (paramterID == "lateReflextionstime")
+    {
+        audioEngine.updatelateReverbTime(newValue);
+    }
+  
 }
-
-void MoorerReverbZenAudioProcessor::updateParameters()
-{
-    audioEngine.updateAmount(treeState.getRawParameterValue("er")->load());
-    audioEngine.updatepreReverbTime(treeState.getRawParameterValue("ertime")->load());
-    audioEngine.updateReso(treeState.getRawParameterValue("resonances")->load());
-    audioEngine.updateresoReverbTime(treeState.getRawParameterValue("resonancestime")->load());
-    audioEngine.updateLateReflextions(treeState.getRawParameterValue("lateReflextions")->load());
-    audioEngine.updatelateReverbTime(treeState.getRawParameterValue("lateReflextionstime")->load());
-}
-
 
 
 //==============================================================================
@@ -159,7 +167,6 @@ void MoorerReverbZenAudioProcessor::prepareToPlay (double sampleRate, int sample
     spec.sampleRate = sampleRate;
     spec.numChannels = 1;
     audioEngine.prepare(spec);
-    updateParameters();
     
 }
 

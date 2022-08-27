@@ -5,6 +5,14 @@
               bundleIdentifier="CodeZenAudio" pluginFormats="buildVST3" pluginManufacturer="CodeZenAudio"
               pluginVST3Category="Reverb">
   <MAINGROUP id="s9s7l2" name="MoorerReverbZen">
+    <GROUP id="{00668087-B026-42EA-3ED6-9C36E328AB79}" name="GUI">
+      <FILE id="rIqYFC" name="Zen_Knob.cpp" compile="1" resource="0" file="Source/Zen_Knob.cpp"/>
+      <FILE id="aFkEhV" name="Zen_Knob.h" compile="0" resource="0" file="Source/Zen_Knob.h"/>
+      <FILE id="B1GqwQ" name="Zen_LookAndFeel.cpp" compile="1" resource="0"
+            file="Source/Zen_LookAndFeel.cpp"/>
+      <FILE id="ksni6c" name="Zen_LookAndFeel.h" compile="0" resource="0"
+            file="Source/Zen_LookAndFeel.h"/>
+    </GROUP>
     <GROUP id="{6AFDA77A-DE7E-35E8-8BFE-7C4C112D438D}" name="Source">
       <GROUP id="{ABD23A2E-F6E9-58C3-5553-3CE491E0BBB6}" name="AudioProcessor">
         <FILE id="ZgL56I" name="AudioEngine.h" compile="0" resource="0" file="Source/AudioEngine.h"/>

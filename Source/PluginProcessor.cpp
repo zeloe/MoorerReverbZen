@@ -234,7 +234,7 @@ bool MoorerReverbZenAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* MoorerReverbZenAudioProcessor::createEditor()
 {
-    return new juce::GenericAudioProcessorEditor(*this);//MoorerReverbZenAudioProcessorEditor (*this);
+    return new MoorerReverbZenAudioProcessorEditor (*this);
 }
 
 //==============================================================================
